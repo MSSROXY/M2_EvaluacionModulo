@@ -1,0 +1,38 @@
+* {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.container-tags {
+  background: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%);
+}
+.text-gradient {
+  background: -webkit-linear-gradient(315deg, #1e30f3 0%, #e21e80 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.img-primary {
+  max-height: 45rem;
+  width: -webkit-fill-available;
+}
+@media (min-width: 576px) {
+  .img-primary {
+    max-height: 65vw;
+  }
+}
+@media (min-width: 768px) {
+  .img-primary {
+    max-height: 55vw;
+  }
+}
+@media (min-width: 992px) {
+  .img-primary {
+    max-height: 45vw;
+  }
+}
+@media (min-width: 1200px) {
+  .img-primary {
+    max-height: 40vw;
+  }
+}
