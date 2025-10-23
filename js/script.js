@@ -1,18 +1,14 @@
-const form = document.getElementById("contactForm");
-const inputs = form.querySelectorAll("input, textarea");
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-function validateField(field) {
-  const value = field.value.trim();
-  const id = field.id;
+function validateField($field) {
+  const id = $field.attr("id");
+  const value = $.trim($field.val());
   let isValid = true;
   let feedbackKey = "";
 
-  // Primero ocultamos todos los feedbacks de ese campo
-  const feedbacks = field.parentElement.querySelectorAll(".invalid-feedback");
-  feedbacks.forEach((f) => (f.style.display = "none"));
+  // Oculta todos los feedbacks primero
+  $field.parent().find(".invalid-feedback").hide();
 
-  // Validaciones específicas
   if (id === "name" && value === "") {
     isValid = false;
     feedbackKey = "name:required";
@@ -32,56 +28,41 @@ function validateField(field) {
     feedbackKey = "message:required";
   }
 
-  // Mostrar u ocultar mensajes según el resultado
+  // Mostrar/ocultar errores
   if (!isValid) {
-    field.classList.add("is-invalid");
-    field.classList.remove("is-valid");
-    const feedback = field.parentElement.querySelector(
-      `[data-sb-feedback="${feedbackKey}"]`
-    );
-    if (feedback) feedback.style.display = "block";
+    $field.addClass("is-invalid").removeClass("is-valid");
+    let feedback = $field.parent().find(`[data-sb-feedback="${feedbackKey}"]`);
+    feedback.fadeIn(150);
   } else {
-    field.classList.remove("is-invalid");
-    field.classList.add("is-valid");
-    // Asegurar que todos los feedback queden ocultos
-    feedbacks.forEach((f) => (f.style.display = "none"));
+    $field.removeClass("is-invalid").addClass("is-valid");
+    $field.parent().find(".invalid-feedback").fadeOut(150);
   }
 
   return isValid;
 }
 
-// Validar mientras escribe o al salir del campo
-inputs.forEach((input) => {
-  input.addEventListener("input", () => validateField(input));
-  input.addEventListener("blur", () => validateField(input));
+$("#contactForm input, #contactForm textarea").on("input blur", function () {
+  validateField($(this));
 });
 
-// Validar todo al enviar
-form.addEventListener("submit", function (event) {
-  event.preventDefault();
+$("#contactForm").on("submit", function (e) {
+  e.preventDefault();
   let formIsValid = true;
 
-  inputs.forEach((input) => {
-    const valid = validateField(input);
-    if (!valid) formIsValid = false;
+  $("#contactForm input, #contactForm textarea").each(function () {
+    if (!validateField($(this))) formIsValid = false;
   });
 
-  const successMsg = document.getElementById("submitSuccessMessage");
-  const errorMsg = document.getElementById("submitErrorMessage");
+  const $successMsg = $("#submitSuccessMessage");
 
   if (formIsValid) {
-    successMsg.classList.remove("d-none");
-    errorMsg.classList.add("d-none");
-    form.reset();
+    $successMsg.removeClass("d-none").hide().fadeIn(300);
+    this.reset();
 
-    inputs.forEach((input) => {
-      input.classList.remove("is-valid", "is-invalid");
-      const feedbacks =
-        input.parentElement.querySelectorAll(".invalid-feedback");
-      feedbacks.forEach((f) => (f.style.display = "none"));
-    });
-  } else {
-    errorMsg.classList.remove("d-none");
-    successMsg.classList.add("d-none");
+    $("#contactForm input, #contactForm textarea")
+      .removeClass("is-valid is-invalid")
+      .each(function () {
+        $(this).parent().find(".invalid-feedback").hide();
+      });
   }
 });
