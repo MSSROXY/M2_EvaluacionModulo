@@ -7,8 +7,6 @@
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,6 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </head>
   <body>
     <header>
@@ -41,25 +40,26 @@
           <div class="collapse navbar-collapse" id="navbarToggler">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
               <li class="nav-item">
-                <a class="nav-link active"href="#intro"
-                  >Introducción</a
-                >
+                <a class="nav-link" href="#intro">Introducción</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Amenazas comunes</a>
+                <a class="nav-link" href="#amenazas">Amenazas comunes</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link">Consejos</a>
+                <a class="nav-link" href="#consejos">Consejos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contacto">Contacto</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
     </header>
-    <section class="py-5" id="#intro">
+    <section class="py-5" id="intro">
       <div class="container px-4 pb-5">
         <div class="row gx-5 align-items-center justify-content-center">
-          <div class="col-xxl-6">
+          <div class="col-12 col-lg-6">
             <div class="text-center text-xxl-start">
               <div
                 class="badge bg-gradient-primary-to-secondary text-white mb-4 container-tags"
@@ -69,27 +69,640 @@
                 </div>
               </div>
             </div>
-            <div class="fs-3 fw-light text-muted">Protege tu mundo digital</div>
+            <div class="fs-3 fw-light text-muted">
+              Soluciones, consejos y recursos para una navegación segura
+            </div>
             <h1 class="display-3 fw-bolder mb-5">
               <span class="text-gradient d-inline"
                 >Aprende a defenderte de las amenazas cibernéticas</span
               >
             </h1>
           </div>
-          <div class="col-xxl-6 text-center">
+          <div class="col-12 col-lg-6 text-center">
             <img
               src="https://png.pngtree.com/png-clipart/20250819/original/pngtree-cybersecurity-lock-3d-icon-png-image_21297590.png"
               alt="ciberseguridad"
-              class="img-primary"
+              class="img-fluid img-primary"
             />
           </div>
         </div>
       </div>
     </section>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
+    <section class="bg-light py-5" id="amenazas">
+      <div class="container px-4">
+        <div class="text-center mb-5">
+          <h1 class="display-5 fw-bolder mb-0">
+            <span class="text-gradient d-inline">Amenazas</span>
+          </h1>
+        </div>
+
+        <div class="row gx-5 justify-content-center">
+          <div class="col-12">
+            <div class="container">
+              <div class="row">
+                <!-- Project Card 1-->
+                <div class="col-12 col-lg-3 col-md-6 mb-4">
+                  <div
+                    class="card overflow-hidden shadow rounded-4 border-0 mb-5"
+                  >
+                    <div class="card-body p-0">
+                      <div class="d-flex flex-column align-items-center">
+                        <div class="p-5">
+                          <h4 class="fw-bolder">Phishing</h4>
+                          <p>
+                            Correos o mensajes falsos que parecen legítimos. Su
+                            objetivo: robar tu información personal o
+                            financiera.
+                          </p>
+                        </div>
+                        <img
+                          class="img-fluid"
+                          src="https://www.valoradata.com/files/uploads/2019/09/phishing.jpg"
+                          alt="Phishing"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Project Card 2-->
+                <div class="col-12 col-lg-3 col-md-6 mb-4">
+                  <div class="card overflow-hidden shadow rounded-4 border-0">
+                    <div class="card-body p-0">
+                      <div class="d-flex flex-column align-items-center">
+                        <div class="p-5">
+                          <h4 class="fw-bolder">Ransomware</h4>
+                          <p>
+                            Malware que cifra tus archivos y pide un rescate
+                            para liberarlos.
+                          </p>
+                        </div>
+                        <img
+                          class="img-fluid"
+                          src="https://info.lse.ac.uk/staff/divisions/dts/assets/images/cyber-security-updates/Ransomware-Attacks/Ransomware.jpeg"
+                          alt="Ransomware"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Project Card 3-->
+                <div class="col-12 col-lg-3 col-md-6 mb-4">
+                  <div class="card overflow-hidden shadow rounded-4 border-0">
+                    <div class="card-body p-0">
+                      <div class="d-flex flex-column align-items-center">
+                        <div class="p-5">
+                          <h4 class="fw-bolder">Malware</h4>
+                          <p>
+                            Software malicioso que puede dañar tu equipo, robar
+                            información o espiar tu actividad.
+                          </p>
+                        </div>
+                        <img
+                          class="img-fluid"
+                          src="https://surfshark.com/wp-content/uploads/2022/09/What-is-Malware_-How-does-it-work-and-how-to-protect-yourself_.png"
+                          alt="Malware"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Project Card 4-->
+                <div class="col-12 col-lg-3 col-md-6 mb-4">
+                  <div class="card overflow-hidden shadow rounded-4 border-0">
+                    <div class="card-body p-0">
+                      <div class="d-flex flex-column align-items-center">
+                        <div class="p-5">
+                          <h4 class="fw-bolder">Ataques DDoS</h4>
+                          <p>
+                            Sobrecargan servidores para que un sitio web deje de
+                            funcionar.
+                          </p>
+                        </div>
+                        <img
+                          class="img-fluid"
+                          src="https://web-assets.esetstatic.com/wls/2018/07/curso-entrenamiento-online-gratuito-protecci%C3%B3n-ataques-DDoS.jpg"
+                          alt="Ataque DDoS"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="fs-3 fw-light text-muted">Veámoslo con ejemplos</div>
+
+        <div id="carouselCibersecurity" class="carousel slide mt-4">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselCibersecurity"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Diapositiva 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselCibersecurity"
+              data-bs-slide-to="1"
+              aria-label="Diapositiva 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselCibersecurity"
+              data-bs-slide-to="2"
+              aria-label="Diapositiva 3"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselCibersecurity"
+              data-bs-slide-to="3"
+              aria-label="Diapositiva 4"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                <div class="card-body p-0 bg-white text-dark">
+                  <div class="row align-items-center">
+                    <div class="col-12 col-lg-8 p-5">
+                      <h2 class="fw-bolder mb-4">
+                        💌 1. Phishing — “El correo del banco falso”
+                      </h2>
+                      <p>
+                        En 2023, miles de usuarios recibieron un correo que
+                        parecía provenir de su banco. El mensaje decía:
+                      </p>
+                      <blockquote class="blockquote">
+                        <p>
+                          “Hemos detectado actividad sospechosa en tu cuenta.
+                          Haz clic aquí para verificar tu identidad.”
+                        </p>
+                      </blockquote>
+                      <p>
+                        El enlace llevaba a una página idéntica a la del banco,
+                        pero falsa. Al ingresar sus datos, los atacantes robaron
+                        contraseñas y accedieron a sus cuentas.
+                      </p>
+                      <p>
+                        <mark
+                          >🧠 Lección: Nunca ingreses tus datos personales desde
+                          enlaces en correos o mensajes. Siempre entra
+                          directamente al sitio oficial desde tu
+                          navegador.</mark
+                        >
+                      </p>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                      <img
+                        class="img-fluid img-card"
+                        src="https://pbs.twimg.com/media/EhVh0WEX0AEiuJJ.jpg"
+                        alt="Ejemplo phising"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                <div class="card-body p-0 bg-white text-dark">
+                  <div class="row align-items-center">
+                    <div class="col-12 col-lg-8 p-5">
+                      <h2 class="fw-bolder mb-4">
+                        💀 2. Ransomware — “El ataque de WannaCry”
+                      </h2>
+                      <p>
+                        En mayo de 2017, un ataque de ransomware llamado
+                        WannaCry se propagó rápidamente por todo el mundo.
+                        Afectó a hospitales, empresas y organismos
+                        gubernamentales en más de 150 países.
+                      </p>
+                      <p>
+                        El virus cifraba los archivos del sistema y pedía un
+                        rescate en Bitcoin para recuperarlos. Entre las víctimas
+                        estuvo el sistema de salud del Reino Unido, que tuvo que
+                        cancelar miles de citas médicas.
+                      </p>
+                      <p>
+                        <mark
+                          >🧠 Lección: Mantén siempre tu sistema operativo
+                          actualizado y haz copias de seguridad. Un parche de
+                          seguridad a tiempo puede evitar un desastre.</mark
+                        >
+                      </p>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                      <img
+                        class="img-fluid img-card"
+                        src="https://i.guim.co.uk/img/media/f33b80766ae6874f05f097a74ebc9b1ddf249fba/0_0_4803_2882/master/4803.jpg?width=1200&quality=85&auto=format&fit=max&s=863cc0388235ccd0397a69681b29d280"
+                        alt="Ejemplo ransomware- WannaCry"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                <div class="card-body p-0 bg-white text-dark">
+                  <div class="row align-items-center">
+                    <div class="col-12 col-lg-8 p-5">
+                      <h2 class="fw-bolder mb-4">
+                        🦠 3. Malware — “El peligro detrás de las descargas
+                        gratis”
+                      </h2>
+                      <p>
+                        Un usuario descargó un supuesto programa gratuito para
+                        editar videos desde un sitio no oficial. Todo parecía
+                        funcionar bien, pero en segundo plano el software estaba
+                        robando sus contraseñas guardadas en el navegador.
+                      </p>
+                      <p>
+                        Al cabo de unos días, descubrió compras en línea que él
+                        nunca había hecho. El “editor gratuito” era un malware
+                        camuflado.
+                      </p>
+                      <p>
+                        <mark
+                          >🧠 Lección: Descarga solo desde fuentes oficiales o
+                          verificadas. Si algo parece demasiado bueno para ser
+                          verdad, probablemente lo sea.</mark
+                        >
+                      </p>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                      <img
+                        class="img-fluid img-card"
+                        src="https://tecnologia-facil.com/wp-content/uploads/2015/11/precauciones-para-descargar-1.jpg"
+                        alt="Ejemplo malware- descargas gratis maliciosas"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                <div class="card-body p-0 bg-white text-dark">
+                  <div class="row align-items-center">
+                    <div class="col-12 col-lg-8 p-5">
+                      <h2 class="fw-bolder mb-4">
+                        🌐 4. Ataques DDoS — “El día que cayó un gigante”
+                      </h2>
+                      <p>
+                        En 2016, un enorme ataque DDoS afectó a la empresa Dyn,
+                        encargada de servicios DNS que usan plataformas como
+                        Twitter, Spotify y Netflix. Millones de usuarios no
+                        pudieron acceder a estos sitios durante horas.
+                      </p>
+                      <p>
+                        El ataque provenía de una red de dispositivos IoT
+                        (cámaras, routers, etc.) infectados por un malware
+                        llamado <span class="fw-bolder">Mirai</span>, que los
+                        convirtió en “zombies” para saturar los servidores.
+                      </p>
+                      <p>
+                        <mark
+                          >🧠 Lección: Incluso tus dispositivos inteligentes
+                          pueden ser parte de un ataque si no están protegidos.
+                          Cambia contraseñas por defecto y actualiza el firmware
+                          de tus aparatos.</mark
+                        >
+                      </p>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                      <img
+                        class="img-fluid img-card"
+                        src="https://estaticos.elmundo.es/assets/multimedia/imagenes/2016/10/22/14771202057211.jpg"
+                        alt="Ejemplo ataque DooS - Mirai"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselCibersecurity"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselCibersecurity"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="bg-light py-5" id="consejos">
+      <div class="container px-4">
+        <div class="text-center">
+          <h1 class="display-5 fw-bolder mb-5">
+            <span class="text-gradient d-inline">Consejos de Seguridad</span>
+          </h1>
+        </div>
+        <div class="row">
+          <!-- 1 -->
+          <div class="col-12 col-md-6 col-lg-6 d-flex align-items-stretch">
+            <div class="card shadow border-0 rounded-4 mb-3 flex-fill">
+              <div class="card-body p-5">
+                <div class="d-flex align-items-center mb-4">
+                  <h3 class="fw-bolder mb-0">
+                    🔄
+                    <span class="text-gradient d-inline">
+                      Mantén tu software actualizado
+                    </span>
+                  </h3>
+                </div>
+                <div>
+                  <p>
+                    Cada actualización corrige vulnerabilidades que los
+                    cibercriminales pueden aprovechar. Mantén tu sistema
+                    operativo, navegador, antivirus y aplicaciones al día para
+                    reducir riesgos.
+                  </p>
+                  <p class="fst-italic">
+                    💡 Tip: activa las actualizaciones automáticas siempre que
+                    sea posible.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2 -->
+          <div class="col-12 col-md-6 col-lg-6 d-flex align-items-stretch">
+            <div class="card shadow border-0 rounded-4 mb-3 flex-fill">
+              <div class="card-body p-5">
+                <div class="d-flex align-items-center mb-4">
+                  <h3 class="fw-bolder mb-0">
+                    🔐
+                    <span class="text-gradient d-inline">
+                      Usa contraseñas fuertes y únicas
+                    </span>
+                  </h3>
+                </div>
+                <div>
+                  <p>
+                    Evita usar la misma contraseña en varios sitios. Crea
+                    contraseñas con letras mayúsculas, minúsculas, números y
+                    símbolos.
+                  </p>
+                  <p class="fst-italic">
+                    💡 Ejemplo: Luna#24!tech es mucho más segura que luna123.
+                  </p>
+                  <p class="fst-italic">
+                    🧩 Consejo extra: utiliza un gestor de contraseñas para
+                    almacenarlas con seguridad.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 -->
+          <div class="col-12 col-md-6 col-lg-6 d-flex align-items-stretch">
+            <div class="card shadow border-0 rounded-4 mb-3 flex-fill">
+              <div class="card-body p-5">
+                <div class="d-flex align-items-center mb-4">
+                  <h3 class="fw-bolder mb-0">
+                    📱
+                    <span class="text-gradient d-inline">
+                      Activa la autenticación de dos factores (2FA)
+                    </span>
+                  </h3>
+                </div>
+                <div>
+                  <p>
+                    El 2FA agrega una capa adicional de protección: además de tu
+                    contraseña, necesitarás un código enviado a tu celular o app
+                    de autenticación.
+                  </p>
+                  <p>
+                    Así, aunque alguien robe tu clave,
+                    <span class="fw-bolder">no podrá acceder a tu cuenta.</span>
+                  </p>
+                  <p class="fst-italic">
+                    💡 Ejemplo: plataformas como Google, Instagram y bancos ya
+                    lo ofrecen de forma gratuita.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4 -->
+          <div class="col-12 col-md-6 col-lg-6 d-flex align-items-stretch">
+            <div class="card shadow border-0 rounded-4 mb-3 flex-fill">
+              <div class="card-body p-5">
+                <div class="d-flex align-items-center mb-4">
+                  <h3 class="fw-bolder mb-0">
+                    ⚠️
+                    <span class="text-gradient d-inline">
+                      No hagas clic en enlaces sospechosos
+                    </span>
+                  </h3>
+                </div>
+                <div>
+                  <p>
+                    Los ataques de phishing se disfrazan de mensajes legítimos.
+                  </p>
+                  <p>
+                    Revisa siempre el remitente y la dirección del enlace antes
+                    de abrirlo.
+                  </p>
+                  <p class="fst-italic">
+                    💡 Tip: si el correo te genera duda, entra manualmente al
+                    sitio oficial escribiendo la URL tú mismo.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5 -->
+          <div class="col-12 col-md-6 col-lg-6 d-flex align-items-stretch">
+            <div class="card shadow border-0 rounded-4 mb-3 flex-fill">
+              <div class="card-body p-5">
+                <div class="d-flex align-items-center mb-4">
+                  <h3 class="fw-bolder mb-0">
+                    💾
+                    <span class="text-gradient d-inline">
+                      Realiza copias de seguridad periódicas
+                    </span>
+                  </h3>
+                </div>
+                <div>
+                  <p>
+                    Guarda tus archivos importantes en la nube o en un disco
+                    externo.
+                  </p>
+                  <p>
+                    Así, si sufres un ataque de ransomware o pierdes tu equipo,
+                    tu información estará a salvo.
+                  </p>
+                  <p class="fst-italic">
+                    💡 Recomendación: realiza respaldos semanales o automáticos.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6 -->
+          <div class="col-12 col-md-6 col-lg-6 d-flex align-items-stretch">
+            <div class="card shadow border-0 rounded-4 mb-3 flex-fill">
+              <div class="card-body p-5">
+                <div class="d-flex align-items-center mb-4">
+                  <h3 class="fw-bolder mb-0">
+                    🌍
+                    <span class="text-gradient d-inline">
+                      Navega solo en sitios seguros
+                    </span>
+                  </h3>
+                </div>
+                <div>
+                  <p>
+                    Asegúrate de que los sitios web que visitas usen HTTPS,
+                    especialmente cuando compartas información personal o
+                    financiera.
+                  </p>
+                  <p>Evita conectarte a redes Wi-Fi públicas sin protección.</p>
+                  <p class="fst-italic">
+                    💡 Consejo extra: si necesitas usar una red pública,
+                    conéctate a través de una VPN para mantener tus datos
+                    cifrados y seguros.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-light py-5" id="contacto">
+      <div class="container px-4">
+        <div class="text-center mb-5">
+          <div
+            class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"
+          >
+            <i class="bi bi-envelope"></i>
+          </div>
+          <h1 class="fw-bolder">Sigamos en contacto</h1>
+          <p class="lead fw-normal text-muted mb-0">¿Dudas? Escríbenos</p>
+        </div>
+        <div class="row gx-5 justify-content-center">
+          <div class="col-lg-8 col-xl-6">
+            <form id="contactForm">
+              <!-- Name input-->
+              <div class="form-floating mb-3">
+                <input
+                  class="form-control"
+                  id="name"
+                  type="text"
+                  placeholder="Ingresa tu nombre..."
+                  data-sb-validations="required"
+                  data-sb-can-submit="no"
+                />
+                <label for="name">Nombre completo</label>
+                <div class="invalid-feedback" data-sb-feedback="name:required">
+                  El nombre es obligatorio
+                </div>
+              </div>
+              <!-- Email address input-->
+              <div class="form-floating mb-3">
+                <input
+                  class="form-control"
+                  id="email"
+                  type="email"
+                  placeholder="correo@ejemplo.com"
+                  data-sb-validations="required,email"
+                  data-sb-can-submit="no"
+                />
+                <label for="email">Correo electrónico</label>
+                <div class="invalid-feedback" data-sb-feedback="email:required">
+                  El correo es obligatorio
+                </div>
+                <div class="invalid-feedback" data-sb-feedback="email:email">
+                 Correo no válido
+                </div>
+              </div>
+              <!-- Phone number input-->
+              <div class="form-floating mb-3">
+                <input
+                  class="form-control"
+                  id="phone"
+                  type="tel"
+                  placeholder="(123) 456-7890"
+                  data-sb-validations="required"
+                  data-sb-can-submit="no"
+                />
+                <label for="phone">Teléfono</label>
+                <div class="invalid-feedback" data-sb-feedback="phone:required">
+                  El teléfono es obligatorio
+                </div>
+              </div>
+              <!-- Message input-->
+              <div class="form-floating mb-3">
+                <textarea
+                  class="form-control"
+                  id="message"
+                  type="text"
+                  placeholder="Ingrese su mensaje aquí"
+                  style="height: 10rem"
+                  data-sb-validations="required"
+                  data-sb-can-submit="no"
+                ></textarea>
+                <label for="message">Mensaje</label>
+                <div
+                  class="invalid-feedback"
+                  data-sb-feedback="message:required"
+                >
+                  El mensaje es obligatorio
+                </div>
+              </div>
+              <!-- Submit success message-->
+              <!---->
+              <!-- This is what your users will see when the form-->
+              <!-- has successfully submitted-->
+              <div class="d-none" id="submitSuccessMessage">
+                <div class="text-center mb-3">
+                  <div class="fw-bolder">¡Datos enviados correctamente!</div>
+                </div>
+              </div>
+              <!-- Submit error message-->
+              <!---->
+              <!-- Submit Button-->
+              <div class="d-grid">
+                <button
+                  class="btn btn-primary btn-lg"
+                  id="submitButton"
+                  type="submit"
+                >
+                  Enviar
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./js/script.js"></script>
   </body>
 </html>
