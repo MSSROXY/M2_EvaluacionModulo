@@ -704,6 +704,197 @@
         </div>
       </div>
     </section>
+    <section class="py-5 bg-gradient-primary-to-secondary text-white">
+      <div class="container px-5 my-5">
+        <div class="text-center">
+          <h2 class="display-4 fw-bolder mb-4">
+            Pon a prueba lo aprendido con este test de seguridad
+          </h2>
+          <button
+            class="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder"
+            data-bs-toggle="modal"
+            data-bs-target="#securityTestModal"
+          >
+            Quiero hacer el test
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="securityTestModal"
+      tabindex="-1"
+      aria-labelledby="securityTestModal"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header bg-gradient-primary-to-secondary p-4">
+            <h5 class="modal-title font-alt text-white" id="feedbackModalLabel">
+              Test de Seguridad
+            </h5>
+            <button
+              class="btn-close btn-close-white"
+              type="button"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              id="closeSecurityTestModal"
+            ></button>
+          </div>
+          <div class="modal-body border-0 p-4">
+            <form id="testForm" class="flex">
+              <!-- Pregunta 1 -->
+              <div class="mb-3">
+                <p class="fw-semibold mb-2">
+                  1. ¿Usas contraseñas diferentes para cada cuenta?
+                </p>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="q1"
+                    id="q1yes"
+                    value="yes"
+                  />
+                  <label class="form-check-label" for="q1yes">Sí</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="q1"
+                    id="q1no"
+                    value="no"
+                  />
+                  <label class="form-check-label" for="q1no">No</label>
+                </div>
+              </div>
+              <!-- 2 pregunta-->
+              <div class="mb-3">
+                <p class="fw-semibold mb-2">
+                  2. ¿Verificas el remitente antes de abrir un correo
+                  sospechoso?
+                </p>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="q2"
+                    id="q2yes"
+                    value="yes"
+                  />
+                  <label class="form-check-label" for="q2yes">Sí</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="q2"
+                    id="q2no"
+                    value="no"
+                  />
+                  <label class="form-check-label" for="q2no">No</label>
+                </div>
+              </div>
+              <!-- 3 pregunta-->
+              <div class="mb-3">
+                <p class="fw-semibold mb-2">
+                  3. ¿Tienes activada la autenticación en dos pasos (2FA)?
+                </p>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="q3"
+                    id="q3yes"
+                    value="yes"
+                  />
+                  <label class="form-check-label" for="q3yes">Sí</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="q3"
+                    id="q3no"
+                    value="no"
+                  />
+                  <label class="form-check-label" for="q3no">No</label>
+                </div>
+              </div>
+              <!-- 4 pregunta-->
+              <div class="mb-3">
+                <p class="fw-semibold mb-2">
+                  4. ¿Realizas copias de seguridad de tu información
+                  regularmente?
+                </p>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="q4"
+                    id="q4yes"
+                    value="yes"
+                  />
+                  <label class="form-check-label" for="q4yes">Sí</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="q4"
+                    id="q4no"
+                    value="no"
+                  />
+                  <label class="form-check-label" for="q4no">No</label>
+                </div>
+              </div>
+              <!-- 5 pregunta-->
+              <div class="mb-3">
+                <p class="fw-semibold mb-2">
+                  5. ¿Evitas conectarte a redes Wi-Fi públicas sin protección?
+                </p>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="q5"
+                    id="q5yes"
+                    value="yes"
+                  />
+                  <label class="form-check-label" for="q5yes">Sí</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="q5"
+                    id="q5no"
+                    value="no"
+                  />
+                  <label class="form-check-label" for="q5no">No</label>
+                </div>
+              </div>
+
+              <div class="d-grid mt-4">
+                <button
+                  class="btn btn-primary btn-lg"
+                  id="submitTest"
+                  type="submit"
+                >
+                  Ver resultados
+                </button>
+              </div>
+            </form>
+            <div class="mt-4 text-center" id="testResult">
+              <p class="mt-2">
+                <span id="feedbackTest"></span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="./js/script.js"></script>
   </body>
 </html>

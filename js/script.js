@@ -66,3 +66,54 @@ $("#contactForm").on("submit", function (e) {
       });
   }
 });
+
+const testForm = document.getElementById("testForm");
+const feedback = document.getElementById("feedbackTest");
+const feedbackContainer = document.getElementById("testResult");
+const closeBtn = document.getElementById("closeSecurityTestModal");
+
+// Reinicia el test al cerrar el modal
+const securityTestModal = document.getElementById("securityTestModal");
+securityTestModal.addEventListener("hidden.bs.modal", function () {
+  testForm.reset(); // limpia respuestas
+  feedback.classList.add("d-none"); // oculta mensaje
+  feedback.classList.remove("text-success", "text-danger");
+  feedback.textContent = ""; // limpia texto
+});
+
+testForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const respuestas = [
+    document.querySelector('input[name="q1"]:checked')?.value,
+    document.querySelector('input[name="q2"]:checked')?.value,
+    document.querySelector('input[name="q3"]:checked')?.value,
+    document.querySelector('input[name="q4"]:checked')?.value,
+    document.querySelector('input[name="q5"]:checked')?.value,
+  ];
+  let mensaje = "";
+  const respuestasSinValor = respuestas.filter((r) => r == undefined).length;
+  // console.log('hoola', respuestas, total, respuestas.length)
+  if (respuestasSinValor > 0) {
+    // console.log("en el if", respuestasSinValor, feedback);
+    feedback.classList.add("text-warning", "fw-semibold");
+    feedback.textContent =
+      "⚠️ Por favor responde todas las preguntas antes de continuar.";
+    return;
+  }
+  const total = respuestas.filter((r) => r === "yes").length;
+  feedback.classList.remove("text-success", "text-warning", "text-danger");
+
+  if (total === 5) {
+    mensaje = "🟢 ¡Excelente! Tienes muy buenos hábitos de seguridad digital.";
+    feedback.classList.add("text-success");
+  } else if (total >= 3) {
+    mensaje = "🟡 Vas por buen camino, pero podrías mejorar algunos hábitos.";
+    feedback.classList.add("text-warning");
+  } else {
+    mensaje = "🔴 Cuidado: estás en riesgo de sufrir ataques cibernéticos.";
+    feedback.classList.add("text-danger");
+  }
+  // console.log("entro al else", total, respuestas);
+  feedback.textContent = `Tu puntaje: ${total}/5. ${mensaje}`;
+});
