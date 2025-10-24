@@ -76,7 +76,6 @@ const closeBtn = document.getElementById("closeSecurityTestModal");
 const securityTestModal = document.getElementById("securityTestModal");
 securityTestModal.addEventListener("hidden.bs.modal", function () {
   testForm.reset(); // limpia respuestas
-  feedback.classList.add("d-none"); // oculta mensaje
   feedback.classList.remove("text-success", "text-danger");
   feedback.textContent = ""; // limpia texto
 });
@@ -102,7 +101,7 @@ testForm.addEventListener("submit", function (e) {
     return;
   }
   const total = respuestas.filter((r) => r === "yes").length;
-  feedback.classList.remove("text-success", "text-warning", "text-danger");
+  feedback.classList.remove("text-success", "text-warning", "text-danger", "d-none");
 
   if (total === 5) {
     mensaje = "🟢 ¡Excelente! Tienes muy buenos hábitos de seguridad digital.";
